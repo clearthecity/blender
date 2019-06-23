@@ -16,8 +16,8 @@
    <div id='author-radio' class='form-group'>
      <div v-bind:key='a' v-for='a in authors' class='form-check'>
        <label v-bind:for="a['authorId']" class='form-check-label'>
-         <input type='radio' class='form-input' v-bind:id="a['authorId']" v-bind:value="a['authorId']" v-model='selectedAuthor'>
-         <Author v-bind:author-name="a['authorName']" v-bind:author-id="a['authorId']"></Author>
+         <input type='radio' class='form-input' v-bind:id="a['authorId']" v-bind:value="a['authorName']" v-model='selectedAuthor'>
+         <Author v-bind:author-name="a['authorName']"></Author>
        </label>
      </div>
      <div class='form-check' style='margin-top:0.5rem'>
@@ -29,7 +29,7 @@
 <div class='row window-nav'>
   <div class='col'>
     <div class='form-group'>
-      <button type='button' v-bind:class="{disabled : (selectedAuthor == null)}" v-bind='currentWindow' v-on:click="nextWindow()" class='btn btn-dark' >Next</button>
+      <button type='button' class='btn btn-dark' v-bind:class="{disabled : (selectedAuthor == null)}" v-bind='currentWindow' v-on:click="nextWindow()">Next</button>
     </div>
   </div>
 </div>
@@ -57,6 +57,21 @@
         </div>
   </div> <!-- end text input window -->
 
+  <div v-if="currentWindow == 3" class='container window' id='result-window'>
+    <div style='text-align:center'>
+      <h4>Step {{ currentWindow }}: Results </h4>
+    </div>
+
+    <div class='row window-nav'>
+      <div class='col'>
+        <div class='form-group'>
+        <button type='button' v-bind='currentWindow' v-on:click="previousWindow" class='btn btn-light mr-2'>Back</button>
+        <button type='button' class='btn btn-dark mr-2'>Save Generated Text</button>
+        </div>
+      </div>
+    </div>
+  </div> <!-- end result window -->
+
   </div> <!-- end container-fluid -->
   </div> <!-- end home -->
 </template>
@@ -70,14 +85,13 @@
       padding: 1rem;
   }
 
-
   button.disabled:hover {
     cursor: not-allowed;
   }
 </style>
 
 <script>
-// @ is an alias to /src
+
 import Author from '@/components/Author.vue'
 
 export default {
@@ -108,7 +122,7 @@ export default {
     },
     randomAuthor: function() {
       let rand = Math.floor(Math.random() * this.authors.length)
-      this.selectedAuthor = this.authors[rand].authorId
+      this.selectedAuthor = this.authors[rand].authorName
     },
     nextWindow: function() {
       this.currentWindow += 1

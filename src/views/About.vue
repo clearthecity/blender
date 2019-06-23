@@ -7,7 +7,7 @@
 </div></div>
 
 <div class='row'><div class='col'>
-  <h5>Can I use this program to write my homework?</h5>
+  <h5>Will this program write my paper for me?</h5>
   <p>Nope.</p>
 </div></div>
 
