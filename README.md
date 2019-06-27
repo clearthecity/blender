@@ -1,4 +1,4 @@
-# bl_vue
+# StyleBlender
 
 ## Project setup
 ```

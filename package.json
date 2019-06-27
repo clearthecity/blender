@@ -1,5 +1,5 @@
 {
-  "name": "bl_vue",
+  "name": "StyleBlender",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,10 +11,11 @@
     "bootstrap": "^4.3.1",
     "core-js": "^2.6.5",
     "jquery": "^3.4.1",
+    "node-markovify": "^1.0.3",
     "popper.js": "^1.15.0",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
-    "vuex": "^3.0.1"
+    "vue-upload-component": "^2.8.20"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.8.0",

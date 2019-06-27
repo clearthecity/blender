@@ -40,6 +40,9 @@ div.container-fluid div.row {
 
   export default {
     name: 'App',
+    components: {
+      //VueUploadComponent
+    }
   }
 
 </script>

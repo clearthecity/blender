@@ -1,24 +1,22 @@
 import Vue from "vue"
 import App from "./App.vue"
 import router from "./router"
-import store from "./store"
+//import store from "./store" //Vuex
 
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+const VueUploadComponent = require('vue-upload-component')
+Vue.component('file-upload', VueUploadComponent)
 
-/*
- To run Python scripts: https://stackoverflow.com/questions/23450534/how-to-call-a-python-function-from-node-js
-https://www.ivarprudnikov.com/nodejs-server-running-python-scripts/
+//import 'node-markovify'
+//import 'fs' //Node file sys.
 
-const spawn = require("child_process").spawn;
-const pythonProcess = spawn('python',["path/to/script.py", arg1, arg2, ...]);
-*/
 
 Vue.config.productionTip = false;
 
 new Vue({
   router,
-  store,
+  //store,
   render: h => h(App)
 }).$mount("#app");

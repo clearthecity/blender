@@ -53,7 +53,6 @@ export default {
 	name: 'Author',
 	props: {
 		authorName: String,
-		authorId: [Number, String],
 	},
 	methods: {
 		getSampleText: function(authorName) {
