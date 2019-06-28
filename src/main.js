@@ -9,8 +9,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 const VueUploadComponent = require('vue-upload-component')
 Vue.component('file-upload', VueUploadComponent)
 
-//import 'node-markovify'
-//import 'fs' //Node file sys.
+const MarkovChain = require('markovchain')
+Object.defineProperty(Vue.prototype, '$markovchain', { value: MarkovChain })
 
 
 Vue.config.productionTip = false;

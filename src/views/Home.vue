@@ -42,9 +42,9 @@
   </div>
   <form name='userUploadForm' id='userUploadForm' enctype='multipart/form-data'>
 
-        <!--
+
         <textarea class='form-control' v-model='inputText' rows='6' placeholder='Write something'></textarea>
-        -->
+
 
     <div class='row'>
       <div class='col'>
@@ -52,8 +52,6 @@
         <!--
         <input type='file' class='form-control-file' name='file' accept='.txt' v-on:change='newUpload($event.target.files[0])'>
         -->
-
-
 
         <div class='btn-group'>
           <file-upload
@@ -89,9 +87,22 @@
     <div style='text-align:center'>
       <h4>Step {{ currentWindow }}: Results </h4>
     </div>
+
     <div class='row'>
       <div class='col'>
-        <markov-result></markov-result>
+        <markov-model :author='selectedAuthor' :inputText='inputText'></markov-model>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col'>
+      <!--
+        <markov-result
+          :selectedAuthor='selectedAuthor'
+          :status='status'
+          :generatedText='generatedText'
+        ></markov-result>
+        -->
       </div>
     </div>
 
@@ -142,34 +153,17 @@
 <script>
 
 import Author from '@/components/Author.vue'
-import MarkovResult from '@/components/MarkovResult.vue'
+//import MarkovResult from '@/components/MarkovResult.vue'
+import MarkovModel from '@/components/MarkovModel.vue'
 
-/*
-function modelFromFile(file) {
-  return new Promise(function(resolve, reject) {
-    fs.readFile(file, 'utf-8', function(err, data) {
-      if (err) {
-        reject(err)
-      }
-      else {
-        let newModel = new MarkovText()
-        newModel.init({
-          text:text
-        })
-        //export newModel as JSON?
-      }
-
-    })
-    // resolve(JSON-object)
-  })
-} */
+const STATUS_WAITING = 0, STATUS_MARKOVIFYING = 1, STATUS_BLENDING = 2, STATUS_DONE = 3, STATUS_ERROR = -1
 
 export default {
   name: "home",
   components: {
     Author,
-    //FileUpload,
-    MarkovResult
+    MarkovModel,
+    //MarkovResult
   },
   data() {
     return {
@@ -182,13 +176,17 @@ export default {
         { authorName: 'Virginia Woolf', authorId: 'VirginiaWoolf' },
       ],
       selectedAuthor: null,
-      //inputText: "",
+      inputText: "",
       uploadedFiles: [],
+      status: STATUS_WAITING,
+      userMarkov: null,
+      num_sentences: 5,
+      generatedText: ""
     }
   },
   methods: {
     resetInputForm: function() {
-      //this.inputText = ""
+      this.inputText = ""
       this.uploadedFiles = []
     },
     randomAuthor: function() {
@@ -206,36 +204,27 @@ export default {
       if (this.currentWindow > 1)
         this.currentWindow -= 1
     },
+    /*
     newUpload: function(fileInput) {
       // regular file input, not for Vue-Upload-Component
       this.uploadedFiles = fileInput
       // a File object wih name, type properties
-    },
+    }, */
     updateFile: function(value) {
       this.uploadedFiles = value
     },
     validateInput: function() {
 
+      /*
       if (this.uploadedFiles.length == 0) {
         alert("No file received")
         return
-      }
+      } */
 
-      /*
-      let formData = new FormData() //JS built-in
-      formData.append(name, value, filename);
-      formData.append('userpic', myFileInput.files[0], 'chris.jpg');
-      */
-
-      let filename = this.uploadedFiles[0].name
-
-      alert("Beginning to generate " + filename)
+      //let filename = this.uploadedFiles[0].name
+      //alert("Beginning to generate " + filename)
       this.nextWindow()
     },
-    generate: function() {
-      //...
-    },
-
   },
 }
 
