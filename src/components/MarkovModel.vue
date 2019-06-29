@@ -7,7 +7,6 @@
     <button type='button' class='btn btn-primary ml-2' v-on:click='makeAuthorChain'>Write</button>
   </div>
 
-
   <div v-if="author == 'Edgar Allan Poe'" id='text-EdgarAllanPoe' class='hide-me'>
   During the whole of a dull, dark, and soundless day in the
 autumn of the year, when the clouds hung oppressively low in the
@@ -668,19 +667,210 @@ not inspire him with horror.
   tooth of hers. She'll be in to-morrow, I guess.”
   </div>
 
-<div v-if="status == 2" id='model-result'>
-  <div class='row'>
-    <div class='col' id='result-text'>
-      {{ generatedText }}
-    </div>
+  <div v-if="author == 'Gertrude Stein'" id='text-GertrudeStein' class='hide-me'>
+    In the inside there is sleeping, in the outside there is reddening, in
+the morning there is meaning, in the evening there is feeling. In the
+evening there is feeling. In feeling anything is resting, in feeling
+anything is mounting, in feeling there is resignation, in feeling there
+is recognition, in feeling there is recurrence and entirely mistaken
+there is pinching. All the standards have steamers and all the curtains
+have bed linen and all the yellow has discrimination and all the circle
+has circling. This makes sand.
+
+Very well. Certainly the length is thinner and the rest, the round rest
+has a longer summer. To shine, why not shine, to shine, to station, to
+enlarge, to hurry the measure all this means nothing if there is
+singing, if there is singing then there is the resumption.
+
+The change the dirt, not to change dirt means that there is no beefsteak
+and not to have that is no obstruction, it is so easy to exchange
+meaning, it is so easy to see the difference. The difference is that a
+plain resource is not entangled with thickness and it does not mean that
+thickness shows such cutting, it does mean that a meadow is useful and a
+cow absurd. It does not mean that there are tears, it does not mean that
+exudation is cumbersome, it means no more than a memory, a choice and a
+reëstablishment, it means more than any escape from a surrounding extra.
+All the time that there is use there is use and any time there is a
+surface there is a surface, and every time there is an exception there
+is an exception and every time there is a division there is a dividing.
+Any time there is a surface there is a surface and every time there is a
+suggestion there is a suggestion and every time there is silence there
+is silence and every time that is languid there is that there then and
+not oftener, not always, not particular, tender and changing and
+external and central and surrounded and singular and simple and the same
+and the surface and the circle and the shine and the succor and the
+white and the same and the better and the red and the same and the
+centre and the yellow and the tender and the better, and altogether.
+
+Considering the circumstances there is no occasion for a reduction,
+considering that there is no pealing there is no occasion for an
+obligation, considering that there is no outrage there is no necessity
+for any reparation, considering that there is no particle sodden there
+is no occasion for deliberation. Considering everything and which way
+the turn is tending, considering everything why is there no restraint,
+considering everything what makes the place settle and the plate
+distinguish some specialties. The whole thing is not understood and this
+is not strange considering that there is no education, this is not
+strange because having that certainly does show the difference in
+cutting, it shows that when there is turning there is no distress.
+
+In kind, in a control, in a period, in the alteration of pigeons, in
+kind cuts and thick and thin spaces, in kind ham and different colors,
+the length of leaning a strong thing outside not to make a sound but to
+suggest a crust, the principal taste is when there is a whole chance to
+be reasonable, this does not mean that there is overtaking, this means
+nothing precious, this means clearly that the chance to exercise is a
+social success. So then the sound is not obtrusive. Suppose it is
+obtrusive suppose it is. What is certainly the desertion is not a
+reduced description, a description is not a birthday.
+
+Lovely snipe and tender turn, excellent vapor and slender butter, all
+the splinter and the trunk, all the poisonous darkening drunk, all the
+joy in weak success, all the joyful tenderness, all the section and the
+tea, all the stouter symmetry.
+
+Around the size that is small, inside the stern that is the middle,
+besides the remains that are praying, inside the between that is
+turning, all the region is measuring and melting is exaggerating.
+
+Rectangular ribbon does not mean that there is no eruption it means that
+if there is no place to hold there is no place to spread. Kindness is
+not earnest, it is not assiduous it is not revered.
+
+Room to comb chickens and feathers and ripe purple, room to curve single
+plates and large sets and second silver, room to send everything away,
+room to save heat and distemper, room to search a light that is simpler,
+all room has no shadow.
+
+There is no use there is no use at all in smell, in taste, in teeth, in
+toast, in anything, there is no use at all and the respect is mutual.
+
+Why should that which is uneven, that which is resumed, that which is
+tolerable why should all this resemble a smell, a thing is there, it
+whistles, it is not narrower, why is there no obligation to stay away
+and yet courage, courage is everywhere and the best remains to stay.
+
+If there could be that which is contained in that which is felt there
+would be a chair where there are chairs and there would be no more
+denial about a clatter. A clatter is not a smell. All this is good.
+
+The Saturday evening which is Sunday is every week day. What choice is
+there when there is a difference. A regulation is not active.
+Thirstiness is not equal division.
+
+Anyway, to be older and ageder is not a surfeit nor a suction, it is not
+dated and careful, it is not dirty. Any little thing is clean, rubbing
+is black. Why should ancient lambs be goats and young colts and never
+beef, why should they, they should because there is so much difference
+in age.
+
+A sound, a whole sound is not separation, a whole sound is in an order.
+
+Suppose there is a pigeon, suppose there is.
+
+Looseness, why is there a shadow in a kitchen, there is a shadow in a
+kitchen because every little thing is bigger.
+
+The time when there are four choices and there are four choices in a
+difference, the time when there are four choices there is a kind and
+there is a kind. There is a kind. There is a kind. Supposing there is a
+bone, there is a bone. Supposing there are bones. There are bones. When
+there are bones there is no supposing there are bones. There are bones
+and there is that consuming. The kindly way to feel separating is to
+have a space between. This shows a likeness.
+
+Hope in gates, hope in spoons, hope in doors, hope in tables, no hope in
+daintiness and determination. Hope in dates.
+
+Tin is not a can and a stove is hardly. Tin is not necessary and neither
+is a stretcher. Tin is never narrow and thick.
+
+Color is in coal. Coal is outlasting roasting and a spoonful, a whole
+spoon that is full is not spilling. Coal any coal is copper.
+
+Claiming nothing, not claiming anything, not a claim in everything,
+collecting claiming, all this makes a harmony, it even makes a
+succession.
+
+Sincerely gracious one morning, sincerely graciously trembling, sincere
+in gracious eloping, all this makes a furnace and a blanket. All this
+shows quantity.
+
+Like an eye, not so much more, not any searching, no compliments.
+
+Please be the beef, please beef, pleasure is not wailing. Please beef,
+please be carved clear, please be a case of consideration.
+
+Search a neglect. A sale, any greatness is a stall and there is no
+memory, there is no clear collection.
+
+A satin sight, what is a trick, no trick is mountainous and the color,
+all the rush is in the blood.
+
+Bargaining for a little, bargain for a touch, a liberty, an
+estrangement, a characteristic turkey.
+
+Please spice, please no name, place a whole weight, sink into a standard
+rising, raise a circle, choose a right around, make the resonance
+accounted and gather green any collar.
+
+To bury a slender chicken, to raise an old feather, to surround a
+garland and to bake a pole splinter, to suggest a repose and to settle
+simply, to surrender one another, to succeed saving simpler, to satisfy
+a singularity and not to be blinder, to sugar nothing darker and to read
+redder, to have the color better, to sort out dinner, to remain
+together, to surprise no sinner, to curve nothing sweeter, to continue
+thinner, to increase in resting recreation to design string not dimmer.
+
+Cloudiness what is cloudiness, is it a lining, is it a roll, is it
+melting.
+
+The sooner there is jerking, the sooner freshness is tender, the sooner
+the round it is not round the sooner it is withdrawn in cutting, the
+sooner the measure means service, the sooner there is chinking, the
+sooner there is sadder than salad, the sooner there is none do her, the
+sooner there is no choice, the sooner there is a gloom freer, the same
+sooner and more sooner, this is no error in hurry and in pressure and in
+opposition to consideration.
+
+A recital, what is a recital, it is an organ and use does not strengthen
+valor, it soothes medicine.
+
+A transfer, a large transfer, a little transfer, some transfer, clouds
+and tracks do transfer, a transfer is not neglected.
+
+Pride, when is there perfect pretence, there is no more than yesterday
+and ordinary.
+
+A sentence of a vagueness that is violence is authority and a mission
+and stumbling and also certainly also a prison. Calmness, calm is beside
+the plate and in way in. There is no turn in terror. There is no volume
+in sound.
+
+There is coagulation in cold and there is none in prudence. Something
+is preserved and the evening is long and the colder spring has sudden
+shadows in a sun. All the stain is tender and lilacs really lilacs are
+disturbed. Why is the perfect reëstablishment practiced and prized, why
+is it composed. The result the pure result is juice and size and baking
+and exhibition and nonchalance and sacrifice and volume and a section in
+division and the surrounding recognition and horticulture and no murmur.
+This is a result. There is no superposition and circumstance, there is
+hardness and a reason and the rest and remainder. There is no delight
+and no mathematics.
   </div>
-  <div class='row'><div class='col'>
-    <button type='button' class='btn btn-dark mr-2' v-on:click='saveAsFile'>Save Generated Text</button>
-  </div></div>
-</div>
+
+  <div v-if="status == 2" id='model-result'>
+    <div class='row'>
+      <div class='col' id='result-text'>
+        {{ generatedText }}
+      </div>
+    </div>
+    <div class='row'><div class='col'>
+      <button type='button' class='btn btn-dark mr-2' v-on:click='saveAsFile'>Save Generated Text</button>
+    </div></div>
+  </div>
 
 </div>
-
 </template>
 
 <style scoped>
