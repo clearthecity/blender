@@ -1,7 +1,7 @@
 <template>
 	<span class='author' onmouseover="this.childNodes[1].style.display = 'block';"  onmouseleave="this.childNodes[1].style.display = 'none';">
 		{{ authorName }}
-			<div class='author-sample' v-bind:id=authorName>
+			<div class='author-sample' :id=authorName>
 				<p> {{ getSampleText(authorName) }} </p>
 			</div>
 	</span>

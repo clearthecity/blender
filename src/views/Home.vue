@@ -15,9 +15,9 @@
   <div class='col'>
    <div id='author-radio' class='form-group'>
      <div v-bind:key='a' v-for='a in authors' class='form-check'>
-       <label v-bind:for="a['authorId']" class='form-check-label'>
-         <input type='radio' class='form-input' v-bind:id="a['authorId']" v-bind:value="a['authorName']" v-model='selectedAuthor'>
-         <Author v-bind:author-name="a['authorName']"></Author>
+       <label v-bind:for="a" class='form-check-label'>
+         <input type='radio' class='form-input' v-bind:value="a" :id="a" v-model='selectedAuthor'>
+         <Author v-bind:author-name="a"></Author>
        </label>
      </div>
      <div class='form-check' style='margin-top:0.5rem'>
@@ -37,14 +37,16 @@
 
 <div v-if="currentWindow == 2" class='container window' id='text-input-window'>
   <div style='text-align:center'>
-    <h4>Step {{ currentWindow }}: Upload your text</h4>
+    <h4>Step {{ currentWindow }}: Add your text</h4>
     <h5>Author model: {{ selectedAuthor }}</h5>
   </div>
   <form name='userUploadForm' id='userUploadForm' enctype='multipart/form-data'>
 
-
+    <div class='row'>
+      <div class='col'>
         <textarea class='form-control' v-model='inputText' rows='6' placeholder='Write something'></textarea>
-
+      </div>
+    </div>
 
     <div class='row'>
       <div class='col'>
@@ -53,7 +55,7 @@
         <input type='file' class='form-control-file' name='file' accept='.txt' v-on:change='newUpload($event.target.files[0])'>
         -->
 
-        <div class='btn-group'>
+        <!--
           <file-upload
             class='btn btn-primary'
             input-id='file-upload'
@@ -65,12 +67,11 @@
             ref='upload'
           > Select
           </file-upload>
-          <button type='button' v-on:click="resetInputForm" class='btn btn-warning mr-2'>Clear</button>
+        -->
 
-        </div>
+        <button type='button' v-on:click="resetInputForm" class='btn btn-warning mr-2'>Clear</button>
 
       </div>
-
     </div>
         <div class='row window-nav'>
           <div class='col'>
@@ -86,6 +87,7 @@
   <div v-if="currentWindow == 3" class='container window' id='result-window'>
     <div style='text-align:center'>
       <h4>Step {{ currentWindow }}: Results </h4>
+      <h5>Author model: {{ selectedAuthor }}</h5>
     </div>
 
     <div class='row'>
@@ -94,23 +96,10 @@
       </div>
     </div>
 
-    <div class='row'>
-      <div class='col'>
-      <!--
-        <markov-result
-          :selectedAuthor='selectedAuthor'
-          :status='status'
-          :generatedText='generatedText'
-        ></markov-result>
-        -->
-      </div>
-    </div>
-
     <div class='row window-nav'>
       <div class='col'>
         <div class='form-group'>
         <button type='button' v-bind='currentWindow' v-on:click="previousWindow" class='btn btn-light mr-2'>Back</button>
-        <button type='button' class='btn btn-dark mr-2'>Save Generated Text</button>
         </div>
       </div>
     </div>
@@ -133,6 +122,7 @@
     cursor: not-allowed;
   }
 
+
   #dropbox {
     /*
     position: relative;
@@ -153,7 +143,6 @@
 <script>
 
 import Author from '@/components/Author.vue'
-//import MarkovResult from '@/components/MarkovResult.vue'
 import MarkovModel from '@/components/MarkovModel.vue'
 
 const STATUS_WAITING = 0, STATUS_MARKOVIFYING = 1, STATUS_BLENDING = 2, STATUS_DONE = 3, STATUS_ERROR = -1
@@ -163,25 +152,20 @@ export default {
   components: {
     Author,
     MarkovModel,
-    //MarkovResult
   },
   data() {
     return {
       currentWindow: 1,
       authors: [
-        { authorName: 'Henry James', authorId: 'HenryJames' },
-        { authorName: 'Frank Norris', authorId: 'FrankNorris' },
-        { authorName: 'Edgar Allan Poe', authorId: 'EdgarAllanPoe' },
-        { authorName: 'Gertrude Stein', authorId: 'GertrudeStein' },
-        { authorName: 'Virginia Woolf', authorId: 'VirginiaWoolf' },
+        'Henry James',
+        'Frank Norris',
+        'Edgar Allan Poe',
+        'Gertrude Stein',
+        'Virginia Woolf'
       ],
       selectedAuthor: null,
       inputText: "",
       uploadedFiles: [],
-      status: STATUS_WAITING,
-      userMarkov: null,
-      num_sentences: 5,
-      generatedText: ""
     }
   },
   methods: {
@@ -191,7 +175,7 @@ export default {
     },
     randomAuthor: function() {
       let rand = Math.floor(Math.random() * this.authors.length)
-      this.selectedAuthor = this.authors[rand].authorName
+      this.selectedAuthor = this.authors[rand]
     },
     nextWindow: function() {
       if (this.currentWindow == 1 && this.selectedAuthor == null) {
