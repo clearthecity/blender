@@ -11,6 +11,3 @@ app.get(/.*/, function(req, res) {
 });
 
 app.listen(port);
-//console.log('Server started');
-
-/* https://www.youtube.com/watch?v=yfW9knTBR90&list=WL&index=17&t=3s */

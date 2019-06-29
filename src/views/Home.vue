@@ -126,8 +126,10 @@
   #privacy-toggle em:hover {
     text-decoration: none;
   }
-  #privacy-toggle span {
-    display: none;
+  @media screen and (min-width:577px) {
+    #privacy-toggle span {
+      display: none;
+    }
   }
 
 </style>
