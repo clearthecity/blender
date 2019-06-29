@@ -48,40 +48,34 @@
       </div>
     </div>
 
+<!--
     <div class='row'>
       <div class='col'>
-
-        <!--
         <input type='file' class='form-control-file' name='file' accept='.txt' v-on:change='newUpload($event.target.files[0])'>
-        -->
-
-        <!--
-          <file-upload
-            class='btn btn-primary'
-            input-id='file-upload'
-            :value='uploadedFiles'
-            @input='updateFile'
-            accept='text/plain'
-            extensions='.txt'
-            :drop='true'
-            ref='upload'
-          > Select
-          </file-upload>
-        -->
-
-        <button type='button' v-on:click="resetInputForm" class='btn btn-warning mr-2'>Clear</button>
-
       </div>
     </div>
-        <div class='row window-nav'>
-          <div class='col'>
-            <div class='form-group'>
-            <button type='button' v-bind='currentWindow' v-on:click="previousWindow" class='btn btn-light mr-2'>Back</button>
-            <button type='button' v-on:click='validateInput' class='btn btn-dark mr-2'>Generate</button>
-            </div>
-          </div>
+-->
+
+    <div class='row'><div class='col'>
+      <span id='privacy-toggle' onmouseover="this.childNodes[1].style.display = 'inline';"  onmouseleave="this.childNodes[1].style.display = 'none';">
+        <em>Is this secure?</em>
+        <span>
+          This program runs entirely in your brower. We&rsquo;re cool.
+        </span>
+      </span>
+    </div></div>
+
+    <div class='row window-nav'>
+      <div class='col'>
+        <div class='form-group'>
+          <button type='button' v-bind='currentWindow' v-on:click="previousWindow" class='btn btn-light mr-2'>Back</button>
+          <button type='button' v-on:click="resetInputForm" class='btn btn-warning mr-2'>Clear</button>
+          <button type='button' v-on:click='validateInput' class='btn btn-dark mr-2'>Next</button>
         </div>
-      </form>
+      </div>
+    </div>
+
+    </form>
   </div> <!-- end text input window -->
 
   <div v-if="currentWindow == 3" class='container window' id='result-window'>
@@ -122,22 +116,20 @@
     cursor: not-allowed;
   }
 
+  #privacy-toggle {
+    font-size: 0.9rem;
+  }
+  #privacy-toggle em {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+  }
+  #privacy-toggle em:hover {
+    text-decoration: none;
+  }
+  #privacy-toggle span {
+    display: none;
+  }
 
-  #dropbox {
-    /*
-    position: relative;
-    height: 100px;
-    width: 50%;
-    margin: 0 auto; */
-    height: 100px;
-    background-color: white;
-    border: 1px dotted black;
-    text-align: center;
-  }
-  #dropbox:hover {
-    background-color: aqua;
-    /* change bg color based on whether .txt file */
-  }
 </style>
 
 <script>
@@ -161,7 +153,6 @@ export default {
         'Frank Norris',
         'Edgar Allan Poe',
         'Gertrude Stein',
-        'Virginia Woolf'
       ],
       selectedAuthor: null,
       inputText: "",
@@ -193,20 +184,16 @@ export default {
       // regular file input, not for Vue-Upload-Component
       this.uploadedFiles = fileInput
       // a File object wih name, type properties
-    }, */
+    },
     updateFile: function(value) {
       this.uploadedFiles = value
     },
+    */
     validateInput: function() {
-
-      /*
-      if (this.uploadedFiles.length == 0) {
-        alert("No file received")
+      if (this.inputText == "" && this.uploadedFiles.length == 0) {
+        alert("No input received")
         return
-      } */
-
-      //let filename = this.uploadedFiles[0].name
-      //alert("Beginning to generate " + filename)
+      }
       this.nextWindow()
     },
   },

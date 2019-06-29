@@ -1,4 +1,5 @@
 <template>
+
 	<span class='author' onmouseover="this.childNodes[1].style.display = 'block';"  onmouseleave="this.childNodes[1].style.display = 'none';">
 		{{ authorName }}
 			<div class='author-sample' :id=authorName>
@@ -23,8 +24,8 @@
   position: absolute;
   top: 0;
   max-width: 350px;
-  padding: 0.3rem;
-  box-shadow: -3px 3px 8px #888;
+  padding: 0.5rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   z-index: 1;
 }
 
@@ -42,7 +43,6 @@
 
 .author-sample p {
   font-family: serif;
-  font-size: 0.9rem;
 }
 
 </style>
