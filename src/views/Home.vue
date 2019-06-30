@@ -138,13 +138,13 @@
 <script>
 
 import Author from '@/components/Author.vue'
-import MarkovModel from '@/components/MarkovModel.vue'
+//import MarkovModel from '@/components/MarkovModel.vue'
 
 export default {
   name: "home",
   components: {
     Author,
-    MarkovModel,
+    'MarkovModel': () => import('@/components/MarkovModel.vue'),
   },
   data() {
     return {

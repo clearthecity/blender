@@ -933,9 +933,11 @@ and no mathematics.
         for (let i = 0; i < this.num_sentences; i++) {
           sentences += this.blendedMarkov.start(useUpperCase).end().process() + ". "
         }
-        this.generatedText = sentences
-        if (this.status == STATUS_DONE)
+        //if regenerating, get rid of text file
+        if (this.generatedText != "")
           document.getElementById('save-link').innerHTML = ""
+
+        this.generatedText = sentences
         this.status = STATUS_DONE
       },
       saveAsFile: function() {
@@ -949,7 +951,7 @@ and no mathematics.
         }
         catch(error) {
           target.innerHTML = 'An error occurred'
-          console.log(error)
+          //console.log(error)
           return
         }
         link.download = title
