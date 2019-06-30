@@ -934,7 +934,8 @@ and no mathematics.
           sentences += this.blendedMarkov.start(useUpperCase).end().process() + ". "
         }
         this.generatedText = sentences
-        document.getElementById('save-link').innerHTML = ""
+        if (this.status == STATUS_DONE)
+          document.getElementById('save-link').innerHTML = ""
         this.status = STATUS_DONE
       },
       saveAsFile: function() {
