@@ -1,5 +1,7 @@
 # StyleBlender
 
+I made this app to experiment with Vue. It uses Shuan Wang&rsquo;s [markovchain](https://github.com/swang/markovchain).
+
 ## Project setup
 ```
 npm install
