@@ -119,14 +119,15 @@
   #privacy-toggle {
     font-size: 0.9rem;
   }
-  #privacy-toggle em {
-    text-decoration: underline;
-    text-decoration-style: dotted;
-  }
-  #privacy-toggle em:hover {
-    text-decoration: none;
-  }
+
   @media screen and (min-width:577px) {
+    #privacy-toggle em {
+      text-decoration: underline;
+      text-decoration-style: dotted;
+    }
+    #privacy-toggle em:hover {
+      text-decoration: none;
+    }
     #privacy-toggle span {
       display: none;
     }
@@ -138,8 +139,6 @@
 
 import Author from '@/components/Author.vue'
 import MarkovModel from '@/components/MarkovModel.vue'
-
-const STATUS_WAITING = 0, STATUS_MARKOVIFYING = 1, STATUS_BLENDING = 2, STATUS_DONE = 3, STATUS_ERROR = -1
 
 export default {
   name: "home",

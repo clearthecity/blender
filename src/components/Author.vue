@@ -37,7 +37,8 @@
 
 @media screen and (max-width:575px) {
   .author-sample {
-    top: 200%;
+		top: -20px;
+    margin-left: 40%;
   }
 }
 
