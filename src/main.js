@@ -6,9 +6,6 @@ import router from "./router"
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-//const VueUploadComponent = require('vue-upload-component')
-//Vue.component('file-upload', VueUploadComponent)
-
 const MarkovChain = require('markovchain')
 Object.defineProperty(Vue.prototype, '$markovchain', { value: MarkovChain })
 

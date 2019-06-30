@@ -119,14 +119,15 @@
   #privacy-toggle {
     font-size: 0.9rem;
   }
-  #privacy-toggle em {
-    text-decoration: underline;
-    text-decoration-style: dotted;
-  }
-  #privacy-toggle em:hover {
-    text-decoration: none;
-  }
+
   @media screen and (min-width:577px) {
+    #privacy-toggle em {
+      text-decoration: underline;
+      text-decoration-style: dotted;
+    }
+    #privacy-toggle em:hover {
+      text-decoration: none;
+    }
     #privacy-toggle span {
       display: none;
     }
