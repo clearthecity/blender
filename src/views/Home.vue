@@ -138,7 +138,6 @@
 <script>
 
 import Author from '@/components/Author.vue'
-//import MarkovModel from '@/components/MarkovModel.vue'
 
 export default {
   name: "home",

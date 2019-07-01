@@ -62,7 +62,7 @@ export default {
 					this.sampleText = `It had occurred to her early that in her position--that of a young person spending, in framed and wired confinement, the life of a guinea-pig or a magpie--she should know a great many persons without their recognising the acquaintance.`;
 					break;
 				case 'Edgar Allan Poe':
-					this.sampleText = `During the whole of a dull, dark, and soundless day in the autumn of the year, when the clouds hung oppressively low in the heavens, I had been passing alone, on horseback, through a singularly dreary tract of country; and at length found myself, as the shades of the evening drew on, within view of the melancholy House of Usher. I know not how it was--but, with the first glimpse of the building, a sense of insufferable gloom pervaded my spirit. `
+					this.sampleText = `During the whole of a dull, dark, and soundless day in the autumn of the year, when the clouds hung oppressively low in the heavens, I had been passing alone, on horseback, through a singularly dreary tract of country; and at length found myself, as the shades of the evening drew on, within view of the melancholy House of Usher.`
 					break;
 				case 'Frank Norris':
 					this.sampleText = `McTeague's mind was as his body, heavy, slow to act, sluggish. Yet there was nothing vicious about the man. Altogether he suggested the draught horse, immensely strong, stupid, docile, obedient.`
