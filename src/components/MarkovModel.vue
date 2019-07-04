@@ -910,7 +910,6 @@ and no mathematics.
     },
     data() {
       return {
-        //authorMarkov: null,
         blendedMarkov: null,
         generatedText: "",
         num_sentences: 5,
