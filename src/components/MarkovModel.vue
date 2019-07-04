@@ -902,6 +902,14 @@ and no mathematics.
     return tmpList[~~(Math.random()*tmpList.length)]
   }
 
+  const endPunctuation = function(sentence) {
+    sentence = sentence.replace(/[,;\-]$/, '')
+    if (sentence.endsWith('?') || sentence.endsWith('!'))
+      sentence += " "
+    else sentence += ". "
+    return sentence
+  }
+
   export default {
     name: 'MarkovModel',
     props: {
@@ -929,8 +937,11 @@ and no mathematics.
       },
       generate: function() {
         let sentences = ""
+        let new_sent
         for (let i = 0; i < this.num_sentences; i++) {
-          sentences += this.blendedMarkov.start(useUpperCase).end().process() + ". "
+          new_sent = this.blendedMarkov.start(useUpperCase).end().process()
+          new_sent = endPunctuation(new_sent)
+          sentences += new_sent
         }
         //if regenerating, get rid of text file
         if (this.generatedText != "")
