@@ -18,11 +18,11 @@
     <h5>What&rsquo;s a Markov chain?</h5>
     <p>A Markov chain represents the probability of transitioning to a state (a word, in this case) given the current state. If I say <em>Have a nice</em>, a Markov chain can determine, based on previous input, what the likeliest next word will be (<em>day</em>? <em>time</em>? <em>banana</em>?). Markov chains are used in predictive text and any number of Twitter bots, and they&rsquo;re a simple but effective way of capturing a writer&rsquo;s style.</p>
 
-    <h5>Why a Markov chain and not a GAN or a recurrent neural network?</h5>
+    <h5>Why a Markov chain and not a neural network?</h5>
     <p>Who&rsquo;s asking these questions, anyway? Training a neural network is computationally intensive. Too intensive for an app with no backend and no purpose.</p>
 
-    <h5>I got some weird/dazzlingly poetic results. Can I share them with you?</h5>
-    <p>Please do! I can be reached via <a href='https://twitter.com/clearthecity'>Twitter</a> or at <em>clearthecity</em> at [the Google email domain]. If you find a bug or have any difficulty using the site&rsquo;s features, please tell me about it or open an issue on <a href='https://github.com/clearthecity/blender'>GitHub</a>. </p>
+    <h5>I got some weird or dazzlingly poetic results. Can I share them with you?</h5>
+    <p>Please do! I can be reached via <a href='https://twitter.com/clearthecity'>Twitter</a> or at <em>clearthecity</em> at [the Google email domain]. If you find a bug or have any difficulty using the site, please tell me about it or open an issue on <a href='https://github.com/clearthecity/blender'>GitHub</a>. </p>
 
   </div>
   </div>
